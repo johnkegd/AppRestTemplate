@@ -6,20 +6,20 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.johnkegd.model.Persona;
-import com.johnkegd.repo.IPersonaRepo;
+import com.johnkegd.model.PersonGS;
+import com.johnkegd.repo.IPersonRepo;
 
 @Controller
 public class DemoController {
 	
 	@Autowired
-	private IPersonaRepo repo;
+	private IPersonRepo repo;
 	
 	
 	@GetMapping("/greeting")
-	public String greeting(@RequestParam(name="name", required=false, defaultValue="Noob") String name , Model model) {
+	public String greeting(@RequestParam(name="name", required=false, defaultValue="User") String name , Model model) {
 		//logic	
-		Persona p = new Persona();
+		PersonGS p = new PersonGS();
 		p.setIdPersona(1);
 		p.setNombre("John");
 		

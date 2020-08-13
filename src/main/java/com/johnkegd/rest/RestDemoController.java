@@ -12,28 +12,28 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.johnkegd.model.Persona;
-import com.johnkegd.repo.IPersonaRepo;
+import com.johnkegd.model.PersonGS;
+import com.johnkegd.repo.IPersonRepo;
 
 @RestController
 @RequestMapping("/personas")
 public class RestDemoController {
 
 	@Autowired
-	private IPersonaRepo repo;
+	private IPersonRepo repo;
 	
 	@GetMapping
-	public List<Persona> listar(){
+	public List<PersonGS> listar(){
 		return repo.findAll();
 	}
 	
 	@PostMapping
-	public void insertar( @RequestBody Persona id){
+	public void insertar( @RequestBody PersonGS id){
 		repo.save(id);
 	}
 	
 	@PutMapping
-	public void modificar( @RequestBody Persona id){
+	public void modificar( @RequestBody PersonGS id){
 		repo.save(id);
 	}
 	
