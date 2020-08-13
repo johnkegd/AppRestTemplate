@@ -20,8 +20,8 @@ public class DemoController {
 	public String greeting(@RequestParam(name="name", required=false, defaultValue="User") String name , Model model) {
 		//logic	
 		PersonGS p = new PersonGS();
-		p.setIdPersona(1);
-		p.setNombre("John");
+		p.setIdPersona(2);
+		p.setNombre("Gwendolin");
 		
 		repo.save(p);
 		
