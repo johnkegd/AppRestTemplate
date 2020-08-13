@@ -13,7 +13,6 @@ import com.johnkegd.model.UserGS;
 import com.johnkegd.repo.IUserRepo;
 
 
-@RunWith(SpringRunner.class)
 @SpringBootTest
 class DemoWebGsApplicationTests {
 
@@ -29,9 +28,9 @@ class DemoWebGsApplicationTests {
 		
 		UserGS us = new UserGS();
 		
-		us.setId(0);
-		us.setNombre("Gwendolin");
-		us.setClave(crypt.encode("123"));
+		us.setId(1);
+		us.setNombre("John");
+		us.setClave(crypt.encode("321"));
 		
 		UserGS retorno = repo.save(us);
 		
