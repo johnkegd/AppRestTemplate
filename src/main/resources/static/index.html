@@ -3,10 +3,15 @@
 <head> 
     <title>Getting Started: Serving Web Content</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale1=1.0"/>
+     <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
-<body>
-    <p>Welcome to DemoWebGS <a href="/greeting">click here</a></p>
-    
+<body style="background:#323232;color:white;">
+<div class="container">
+    <p>Welcome to DemoWebGS <a class="btn-floating btn-large pulse orange accent-4" href="/greeting"><i class="material-icons">add</i></a></p>
     <p th:text="'Hello, ' + ${name} + '!'" />
 	
 	<table>
@@ -17,5 +22,18 @@
 			</tr>
 		</th:block>
 	</table>
+	</div>
+	
+	  <footer class="page-footer" style="background:rgb(251, 111, 76)">
+          <div class="footer-copyright">
+            <div class="container">
+            © 2020 Github Project
+            <a class="grey-text text-lighten-4 right" href="https://github.com/johnkegd">Johnkegd</a>
+            </div>
+            </div>
+        </footer>
+	
+	<!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
